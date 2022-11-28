@@ -1,0 +1,82 @@
+﻿<Window x:Class="Laba3_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba3_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800" Background="#FFACF9FF">
+    <Grid>
+        <Canvas>
+            <Button Name="Create"  Click="Button_Click_Create" Height="50" Width="200" Background="Violet">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"><Run Text=" Создать БД"/></TextBlock>
+            </Button>
+            <Button  Canvas.Top="50"  Name="Write" Click="Button_Click_Write" Height="50" Width="200" Background="Violet">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"><Run Text=" "/>Вывести <LineBreak/>все данные</TextBlock>
+            </Button>
+            <Button Canvas.Top="100" Name="Otchet" Click="Button_Click_Otchet" Height="50" Width="200" Background="Violet">
+                <TextBlock VerticalAlignment="Center" FontSize="15" Width="141"> <Run Text="    "/>Вывод машин<LineBreak/><Run Text="       "/>в файл .txt.</TextBlock>
+            </Button>
+            <Button Canvas.Top="25" Canvas.Left="200" Name="zap1" Click="Button_Click_1" Height="50" Width="200" Background="MediumSlateBlue">
+                <StackPanel Orientation="Horizontal" Width="200" >
+                    <Image Height="44" Source="D:/Lab.3/Laba 3/img/1.jpg" RenderTransformOrigin="-0.036,0.363" Width="47"  />
+                    <TextBlock VerticalAlignment="Center" FontSize="15" Width="132"> <Run Text="   "/>Запрос 1 Alfa<LineBreak/>Romeo на складе</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Top="25" Canvas.Left="400" Name="zap2" Click="Button_Click_2" Height="50" Width="200" Background="DeepSkyBlue">
+                <StackPanel Orientation="Horizontal" Width="200" >
+                    <Image Height="45" Source="D:\Lab.3\Laba 3\2.jpg"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="15" Width="115" > <Run Text="    "/>Запрос 2 <LineBreak/><Run Text="  "/>Склады с BMW</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Top="25" Canvas.Left="600" Name="zap3" Click="Button_Click_3" Height="50" Width="200" Background="MediumSlateBlue">
+                <StackPanel Orientation="Horizontal" Width="200" >
+                    <Image Height="40" Source="D:\Lab.3\Laba 3\3.jpg"  />
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"><Run Text="       "/>Запрос 3<LineBreak/>Машины дешевле</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Top="75" Canvas.Left="200" Name="zap4" Click="Button_Click_4" Height="50" Width="200" Background="DeepSkyBlue">
+                <StackPanel Orientation="Horizontal" Width="200" >
+                    <Image Height="41" Source="D:\Lab.3\Laba 3\4.jpg" Width="47"  />
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"><Run Text=" "/>Запрос 4 Машины <LineBreak/><Run Text="     "/>с пометкой</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Top="75" Canvas.Left="400" Name="zap5" Click="Button_Click_5" Height="50" Width="200" Background="MediumSlateBlue">
+                <StackPanel Orientation="Horizontal" Width="200" >
+                    <Image Height="43" Source="D:\Lab.3\Laba 3\5.jpg"  />
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"><Run Text=" "/> Запрос 5 Склады <LineBreak/><Run Text="     "/>с машинами</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Top="75" Canvas.Left="600"  Name="zap6" Click="Button_Click_6" Height="50" Width="200" Background="DeepSkyBlue">
+                <StackPanel Orientation="Horizontal" Width="200" >
+                    <Image Height="38" Source="D:\Lab.3\Laba 3\6.jpg" Width="39"  />
+                    <TextBlock VerticalAlignment="Center" FontSize="15" Width="141"><Run Text=" "/>Запрос 6 Машины<LineBreak/><Run Text="      "/>до 2000г.</TextBlock>
+                </StackPanel>
+            </Button>
+           
+        </Canvas>
+        <Grid Margin="0,151,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4" Foreground="White"  Name="Table1">
+                <DataGrid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2B36E8" Offset="0"/>
+                        <GradientStop Color="#FFACF9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </DataGrid.Background>
+            </DataGrid>
+
+        </Grid>
+    </Grid>
+</Window>
